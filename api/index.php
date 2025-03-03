@@ -111,7 +111,7 @@ function extractPsshFromManifest(string $content, string $baseUrl, string $userA
     return null;
 }
 function getChannelInfo(string $id): array {
-    $json = @file_get_contents('https://raw.githubusercontent.com/ttoor5/tataplay_urls/main/origin.json');
+    $json = @file_get_contents('https://raw.githubusercontent.com/reddy7322/tp/refs/heads/main/public/tplay.json');
     $channels = $json !== false ? json_decode($json, true) : null;
     if ($channels === null) {
         exit;
