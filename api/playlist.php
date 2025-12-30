@@ -33,7 +33,7 @@ foreach ($channels as $channel) {
     $playlistUrl = "https://salman-bhai-ka.vercel.app/{$id}.mpd";
     $m3u8PlaylistFile .= "#EXTINF:-1 tvg-id=\"{$id}\" tvg-country=\"IN\" catchup-days=\"7\" tvg-logo=\"https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/{$channel['channel_logo']}\" group-title=\"{$channel['channel_genre'][0]}\",{$channel['channel_name']}\n";
     $m3u8PlaylistFile .= "#KODIPROP:inputstream.adaptive.license_type=clearkey\n";
-    $m3u8PlaylistFile .= "#KODIPROP:inputstream.adaptive.license_key=https://kong-tatasky-clearkey-api.vercel.app/tkey/{$id}";
+    $m3u8PlaylistFile .= "#KODIPROP:inputstream.adaptive.license_key=https://kong-tatasky-clearkey-api.vercel.app/tkey/{$id}\n";
     $m3u8PlaylistFile .= "#EXTVLCOPT:http-user-agent=third-party\n";
     $m3u8PlaylistFile .= "$playlistUrl\n\n";
 }
